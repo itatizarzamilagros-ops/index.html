@@ -55,6 +55,6 @@ El proyecto comprende:
 
 La información analizada se presenta mediante una página web desarrollada en HTML.
 
-## 📚 Fuentes
+## Fuentes
 
 Las fuentes utilizadas se encuentran detalladas dentro de los archivos de trabajo y en la página web del proyecto.
