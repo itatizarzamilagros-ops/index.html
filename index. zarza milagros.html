@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Importaciones y Exportaciones de Argentina (2021–2025)</title>
+<meta name="description" content="Análisis de las importaciones y exportaciones de Argentina 2021-2025 y su relación con los cambios normativos del comercio exterior.">
+<style>
+:root{--navy:#14263f;--navy2:#1f3a5f;--bg:#f4f6f9;--card:#fff;--ink:#1d2733;--mute:#5a6776;--line:#d9dfe7;--exp:#1f5f8b;--imp:#c08a2b;--pos:#2b7a5b;--neg:#b03a2e}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1722;--card:#17212f;--ink:#e6ebf1;--mute:#9aa8b8;--line:#2b394b;--exp:#5aa6d6;--imp:#e0a94a;--pos:#4fb58c;--neg:#e0685a}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.25;margin:0 0 .6em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--imp);outline-offset:2px}
+nav{position:sticky;top:0;z-index:10;background:var(--navy);color:#fff}
+.nav-in{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:0 16px}
+.brand{font-family:Georgia,serif;font-weight:700;padding:14px 0}
+nav ul{list-style:none;margin:0;padding:0;display:flex;gap:2px;overflow-x:auto}
+nav a{display:block;padding:14px 10px;text-decoration:none;font-size:.88rem;white-space:nowrap;color:#d6dfeb}
+nav a:hover,nav a.on{color:#fff;box-shadow:inset 0 -3px var(--imp)}
+@media(max-width:860px){.nav-in{flex-direction:column;align-items:stretch}.brand{padding:10px 0 0}}
+header.hero{background:var(--navy);color:#fff;padding:72px 16px 64px;border-bottom:6px solid var(--imp)}
+.wrap{max-width:1100px;margin:auto}
+.hero h1{font-size:clamp(1.9rem,5vw,3.2rem);max-width:18em}
+.hero p.sub{max-width:44em;color:#c9d5e4;font-size:1.05rem}
+.ficha{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:32px}
+.ficha div{border-left:3px solid var(--imp);padding:2px 14px}
+.ficha b{display:block;font-size:.8rem;font-weight:600;color:#9fb3cc}
+section{padding:56px 16px}
+section:nth-of-type(even){background:var(--card)}
+section h2{font-size:1.8rem;border-bottom:2px solid var(--line);padding-bottom:.4em;margin-bottom:1em}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:20px}
+section:nth-of-type(even) .card{background:var(--bg)}
+.card h3{font-size:1.1rem}
+.card p{margin:0;color:var(--mute)}
+p{max-width:70ch}
+ul.clean{padding-left:1.2em;max-width:70ch}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:.93rem}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--navy2);color:#fff;font-weight:600;white-space:nowrap}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+.pos{color:var(--pos);font-weight:600}.neg{color:var(--neg);font-weight:600}
+.note{font-size:.85rem;color:var(--mute);margin-top:8px}
+.charts{display:grid;gap:16px;margin-top:24px;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr))}
+.chart{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:16px}
+section:nth-of-type(even) .chart{background:var(--bg)}
+.chart h3{font-size:1rem;margin-bottom:.2em}
+.chart svg{width:100%;height:auto;display:block}
+.chart text{fill:var(--mute);font:11px system-ui,sans-serif}
+.legend{display:flex;gap:16px;font-size:.85rem;color:var(--mute);margin:6px 0 4px;flex-wrap:wrap}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.filters button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 16px;font:inherit;font-size:.9rem;cursor:pointer}
+.filters button[aria-pressed=true]{background:var(--navy2);color:#fff;border-color:var(--navy2)}
+.timeline{border-left:3px solid var(--navy2);padding-left:20px;max-width:75ch}
+.timeline div{margin-bottom:22px;position:relative}
+.timeline div:before{content:"";position:absolute;left:-28px;top:7px;width:13px;height:13px;border-radius:50%;background:var(--imp);border:2px solid var(--bg)}
+.timeline h3{font-size:1.1rem;margin-bottom:.2em}
+.timeline p{margin:0}
+.tag{display:inline-block;font-size:.8rem;background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:1px 8px;margin:2px 4px 2px 0}
+footer{background:var(--navy);color:#b9c7d9;padding:28px 16px;font-size:.88rem}
+@media(max-width:600px){section{padding:40px 14px}.hero{padding:48px 14px}}
+</style>
+</head>
+<body>
+<nav aria-label="Navegación principal"><div class="nav-in">
+<div class="brand">Comercio Exterior 2021–2025</div>
+<ul id="menu">
+<li><a href="#introduccion">Introducción</a></li>
+<li><a href="#objetivos">Objetivos</a></li>
+<li><a href="#metodologia">Metodología</a></li>
+<li><a href="#estadisticas">Estadísticas</a></li>
+<li><a href="#normativa">Normativa</a></li>
+<li><a href="#analisis">Análisis</a></li>
+<li><a href="#despachante">Despachante</a></li>
+<li><a href="#conclusion">Conclusión</a></li>
+<li><a href="#fuentes">Fuentes</a></li>
+</ul></div></nav>
+
+<header class="hero" id="inicio"><div class="wrap">
+<h1>Análisis de las importaciones y exportaciones de Argentina durante el período 2021–2025 y su relación con los cambios normativos del comercio exterior</h1>
+<p class="sub">Proyecto de desarrollo – Parte 1</p>
+<div class="ficha">
+<div><b>Materia</b>Importación y Exportación</div>
+<div><b>Carrera</b>Despacho Aduanero</div>
+<div><b>Período analizado</b>2021–2025</div>
+<div><b>Alumna</b>Milagros Itatí Zarza</div>
+</div></div></header>
+
+<main>
+<section id="introduccion"><div class="wrap">
+<h2>Introducción</h2>
+<p>Entre 2021 y 2025 el comercio exterior argentino presentó una marcada variabilidad: pasó de superávits moderados en 2021 y 2022 a un déficit en 2023, vinculado a la sequía histórica, para luego registrar un superávit récord en 2024 y estabilizarse en 2025.</p>
+<p>En ese mismo período se dictaron decretos, resoluciones y normas sobre derechos de exportación, liquidación de divisas, régimen de importadores y digitalización de trámites, que forman el marco en el que trabaja el despachante de aduana.</p>
+<div class="grid" style="margin-top:20px">
+<div class="card"><h3>Exportaciones</h3><p>De USD 73.092 M en 2021 a USD 87.077 M en 2025.</p></div>
+<div class="card"><h3>Importaciones</h3><p>De USD 63.193 M en 2021 a USD 75.791 M en 2025.</p></div>
+<div class="card"><h3>Saldo 2024</h3><p>Superávit de USD 18.899 M, el mayor del período.</p></div>
+</div></div></section>
+
+<section id="objetivos"><div class="wrap">
+<h2>Objetivos</h2>
+<div class="grid">
+<div class="card"><h3>Objetivo general</h3><p>Analizar la evolución del comercio exterior argentino durante 2021–2025 y vincular sus variaciones estadísticas con las principales modificaciones en decretos, resoluciones y normativas de comercio exterior.</p></div>
+<div class="card"><h3>Objetivo específico</h3><p>Evaluar el impacto de esos cambios normativos en la labor técnica del despachante de aduana.</p></div>
+</div></div></section>
+
+<section id="metodologia"><div class="wrap">
+<h2>Metodología</h2>
+<p>Se analizaron datos estadísticos de importaciones y exportaciones y la normativa relacionada con el comercio exterior. El trabajo se basa en tres fuentes:</p>
+<div class="grid" style="margin-top:16px">
+<div class="card"><h3>Excel 1</h3><p>Series estadísticas de exportaciones, importaciones y saldo comercial, 2021–2025, en millones de dólares estadounidenses (USD millones).</p></div>
+<div class="card"><h3>Excel 2</h3><p>Cronograma normativo por año: principales normas, temas clave, efecto en las operaciones y recomendación para el despachante.</p></div>
+<div class="card"><h3>Informe</h3><p>Explicación de los datos de la balanza comercial, causas de las variaciones interanuales y marco regulatorio.</p></div>
+</div>
+<p class="note">Las relaciones entre estadísticas y normas se expresan como coexistencia temporal y contexto regulatorio, sin afirmar causalidad directa.</p>
+</div></section>
+
+<section id="estadisticas"><div class="wrap">
+<h2>Estadísticas 2021–2025</h2>
+<p class="note" style="margin:-8px 0 12px">Todas las cifras están expresadas en millones de dólares estadounidenses (USD millones).</p>
+<div class="tw"><table>
+<thead><tr><th>Año</th><th class="n">Exportaciones</th><th class="n">Importaciones</th><th class="n">Saldo de la balanza comercial</th></tr></thead>
+<tbody id="tbody"></tbody></table></div>
+
+<div class="charts">
+<div class="chart"><h3>Exportaciones e importaciones (USD millones)</h3>
+<div class="legend"><span><i style="background:var(--exp)"></i>Exportaciones</span><span><i style="background:var(--imp)"></i>Importaciones</span></div>
+<svg id="c1" viewBox="0 0 560 320" role="img" aria-label="Gráfico de barras de exportaciones e importaciones por año"></svg></div>
+<div class="chart"><h3>Saldo de la balanza comercial (USD millones)</h3>
+<div class="legend"><span><i style="background:var(--pos)"></i>Superávit</span><span><i style="background:var(--neg)"></i>Déficit</span></div>
+<svg id="c2" viewBox="0 0 560 320" role="img" aria-label="Gráfico de barras del saldo comercial por año"></svg></div>
+<div class="chart"><h3>Evolución de exportaciones (USD millones)</h3>
+<svg id="c3" viewBox="0 0 560 280" role="img" aria-label="Gráfico de líneas de exportaciones"></svg></div>
+<div class="chart"><h3>Evolución de importaciones (USD millones)</h3>
+<svg id="c4" viewBox="0 0 560 280" role="img" aria-label="Gráfico de líneas de importaciones"></svg></div>
+</div>
+
+<h3 style="margin-top:32px">Variaciones interanuales</h3>
+<div class="tw"><table>
+<thead><tr><th>Período</th><th class="n">Exportaciones</th><th class="n">Importaciones</th></tr></thead>
+<tbody>
+<tr><td>2021–2022</td><td class="n pos">+21,0%</td><td class="n pos">+29,0%</td></tr>
+<tr><td>2022–2023</td><td class="n neg">-24,5%</td><td class="n neg">-9,6%</td></tr>
+<tr><td>2023–2024</td><td class="n pos">+19,4%</td><td class="n neg">-17,5%</td></tr>
+<tr><td>2024–2025</td><td class="n pos">+9,3%</td><td class="n pos">+24,7%</td></tr>
+</tbody></table></div>
+
+<div class="grid" style="margin-top:20px">
+<div class="card"><h3>Exportaciones</h3><p>En 2021–2022 hubo dinamismo por la reactivación post-pandemia, con tracción del sector agropecuario y de manufacturas. En 2023 se produjo un desplome por la sequía histórica (soja, maíz, trigo). En 2024 y 2025 hubo recuperación por la normalización de las cosechas y más ventas de sectores no agropecuarios.</p></div>
+<div class="card"><h3>Importaciones</h3><p>2022 fue el nivel más alto de la primera mitad del quinquenio, por mayor demanda de bienes intermedios y de capital. En 2023 y 2024 cayeron por políticas de ahorro de divisas, controles sobre licencias y restricciones de acceso al MLC. En 2025 el repunte sugiere mayor disponibilidad de divisas y flexibilización gradual.</p></div>
+<div class="card"><h3>Balanza comercial</h3><p>Superávit en 2021, 2022, 2024 y 2025. 2023 fue el único año deficitario del período, producto de la sequía.</p></div>
+</div></div></section>
+
+<section id="normativa"><div class="wrap">
+<h2>Cambios normativos</h2>
+<div class="filters" id="filters" role="group" aria-label="Filtrar por año"></div>
+<div class="tw"><table>
+<thead><tr><th>Año</th><th>Número de norma</th><th>Fecha</th><th>Organismo</th><th>Tema</th><th>Qué modificó</th><th>Relación con la actividad del despachante de aduana</th></tr></thead>
+<tbody id="nbody"></tbody></table></div>
+<p class="note">En el Excel 2, las normas específicas de 2025 figuran como “a completar con búsqueda en Boletín Oficial e InfoLEG”. El Decreto 697/2024 aparece listado en la celda del año 2023 del archivo.</p>
+</div></section>
+
+<section id="analisis"><div class="wrap">
+<h2>Análisis: estadísticas y normativa</h2>
+<p>Las relaciones se plantean como coexistencia temporal y contexto regulatorio, no como causas demostradas.</p>
+<div class="timeline" style="margin-top:20px">
+<div><h3>2021–2022</h3><p>La reducción de retenciones a economías regionales (Decretos 410/2021 y 852/2021) y el ordenamiento arancelario (Decreto 851/2021) se observan en el mismo período en que las exportaciones crecieron +21,0%. El tipo de cambio diferencial del Decreto 576/2022 coincide temporalmente con la necesidad oficial de incentivar el ingreso de divisas frente al aumento de +29,0% en las importaciones.</p></div>
+<div><h3>2023</h3><p>Las normas de liquidación de divisas en el MLC (DNU 549/2023 y DNU 28/2023) y los ajustes sectoriales (Decreto 506/2023) fueron dictados en el mismo período en que las exportaciones cayeron -24,5% por la sequía, con el único saldo negativo del quinquenio (-6.925 M USD).</p></div>
+<div><h3>2024</h3><p>El Decreto 384/2024 (régimen de importadores) y la Ventanilla Única (RG 5613/2024) se observan junto con la caída de importaciones de -17,5% y el superávit récord de +18.899 M USD.</p></div>
+<div><h3>2025</h3><p>El repunte de importaciones (+24,7%) y el crecimiento de exportaciones (+9,3%) podrían analizarse en relación con la continuidad de esquemas promocionales previos y un marco operativo con menor restricción cambiaria.</p></div>
+</div></div></section>
+
+<section id="despachante"><div class="wrap">
+<h2>Importancia para el despachante de aduana</h2>
+<p>Los cambios en el marco normativo imponen al despachante de aduana:</p>
+<div class="grid" style="margin-top:12px">
+<div class="card"><h3>Alícuotas NCM</h3><p>Mantener actualizadas las tablas de alícuotas de la NCM.</p></div>
+<div class="card"><h3>Regímenes especiales</h3><p>Verificar la adhesión a regímenes especiales.</p></div>
+<div class="card"><h3>Aspectos cambiarios</h3><p>Coordinar los aspectos cambiarios con los clientes.</p></div>
+<div class="card"><h3>Plataformas digitales</h3><p>Adaptarse a plataformas digitales como la Ventanilla Única de ARCA.</p></div>
+</div></div></section>
+
+<section id="conclusion"><div class="wrap">
+<h2>Conclusión</h2>
+<p>El comercio exterior argentino de 2021–2025 mostró una marcada variabilidad: superávits moderados en 2021–2022, un déficit en 2023 generado por la sequía histórica y un superávit récord en 2024, sustentado por la compresión de importaciones y la recuperación agrícola, con estabilización en 2025.</p>
+<p>Los flujos comerciales estuvieron acompañados por modificaciones en los derechos de exportación, incentivos cambiarios temporales (Programa de Incremento Exportador), regulaciones de liquidación de divisas y herramientas de control aduanero. Para el despachante de aduana, esto exige actualización normativa permanente.</p>
+</div></section>
+
+<section id="fuentes"><div class="wrap">
+<h2>Fuentes</h2>
+<p>Fuentes de datos y normativa que figuran en los archivos del proyecto:</p>
+<ul class="clean">
+<li>INDEC</li><li>Cancillería</li><li>Boletín Oficial</li><li>InfoLEG</li><li>Biblioteca ARCA/AFIP</li>
+</ul>
+<p class="note">Archivos de trabajo: Excel 1 (series estadísticas), Excel 2 (cronograma normativo) e informe del proyecto.</p>
+</div></section>
+</main>
+
+<footer><div class="wrap">Proyecto de desarrollo – Parte 1 · Importación y Exportación · Despacho Aduanero · Milagros Itatí Zarza · 30-09-2026</div></footer>
+
+<script>
+const D=[
+{y:2021,e:73092,i:63193,s:9899},
+{y:2022,e:88446,i:81523,s:6923},
+{y:2023,e:66789,i:73714,s:-6925},
+{y:2024,e:79721,i:60822,s:18899},
+{y:2025,e:87077,i:75791,s:11286}];
+const N=[
+[2021,"Decreto 851/2021","Publicado 15/12/2021","Poder Ejecutivo Nacional (P.E.N.)","Derechos de Exportación (D.E.) por NCM","Fijó alícuotas de D.E. a partir del 01/01/2022 para posiciones de la NCM (agro e industria).","Coincide con la reestructuración de alícuotas en un período de crecimiento del valor exportado."],
+[2021,"Decreto 852/2021","Publicado 12/2021","P.E.N.","D.E. para productos orgánicos y ecológicos","Fijó alícuota del 0% de D.E. para productos certificados (exceptuando soja, trigo y maíz).","Incentivo específico a exportaciones con valor agregado orgánico."],
+[2021,"Decreto 410/2021","25/06/2021","P.E.N.","D.E. en economías regionales","Redujo alícuotas a 0% para productos de economías regionales.","Coincide temporalmente con el alto dinamismo exportador del período 2021–2022."],
+[2022,"Decreto 576/2022 y complementarias (787/22, etc.)","04/09/2022 (publ. 05/09/2022)","P.E.N.","Programa de Incremento Exportador (“Dólar Soja”)","Creó un tipo de cambio especial ($200/USD) y reglas de liquidación voluntarias.","Coincide temporalmente con un pico en el valor de las exportaciones anuales (USD 88.446 M)."],
+[2023,"Decreto 506/2023 (y Dec. 697/2024)","03/10/2023","P.E.N.","D.E. para productos lácteos","Modificó y estableció exenciones/alícuotas de D.E. para el sector lácteo.","Ajuste de retenciones sectoriales durante un año con severa restricción de divisas."],
+[2023,"DNU 549/2023 y DNU 28/2023","23/10/2023 y 13/12/2023","P.E.N.","Liquidación de divisas en el MLC","Exigió liquidar el 70% (luego 80%) en el MLC y el remanente en valores negociables.","Se implementó durante el año del déficit comercial (-6.925 M USD) originado por la sequía."],
+[2024,"Resolución General 5613/2024","13/12/2024","ARCA (ex AFIP)","Ventanilla Única de Comercio Exterior (VUCE)","Incorporó disposiciones para la digitalización y centralización de trámites.","Coincide con el proceso de simplificación y control documental aduanero."],
+[2024,"Decreto 384/2024","Vigencia desde 07/05/2024","P.E.N.","Régimen de importadores y aranceles","Ajustes en el régimen de importadores y condiciones para operar.","Coincide temporalmente con la caída de -17,5% en importaciones y el superávit récord."],
+[2024,"Decreto 1140/2024","31/12/2024","P.E.N.","Disposiciones generales","Norma marco de comercio exterior (texto a consultar en B.O.).","Marco regulatorio general de cierre de año."],
+[2025,"Normas a completar vía B.O. / InfoLEG","2025","Organismos oficiales","Continuidad de regímenes y licencias","Acompaña la recuperación de importaciones e incremento de exportaciones.","Coincide temporalmente con el fuerte repunte del flujo de importaciones (+24,7%)."]];
+const f=n=>n.toLocaleString("de-DE");
+const sg=n=>(n>0?"+":"")+f(n);
+document.getElementById("tbody").innerHTML=D.map(d=>`<tr><td>${d.y}</td><td class="n">${f(d.e)}</td><td class="n">${f(d.i)}</td><td class="n ${d.s<0?"neg":"pos"}">${sg(d.s)}</td></tr>`).join("");
+
+/* Normativa con filtro por año */
+const fb=document.getElementById("filters"),nb=document.getElementById("nbody");
+let cur="Todos";
+function renderN(){
+ nb.innerHTML=N.filter(r=>cur==="Todos"||r[0]==cur).map(r=>`<tr><td>${r[0]}</td><td><b>${r[1]}</b></td><td>${r[2]}</td><td>${r[3]}</td><td>${r[4]}</td><td>${r[5]}</td><td>${r[6]}</td></tr>`).join("");
+ [...fb.children].forEach(b=>b.setAttribute("aria-pressed",b.textContent==cur));
+}
+["Todos",2021,2022,2023,2024,2025].forEach(v=>{const b=document.createElement("button");b.textContent=v;b.onclick=()=>{cur=v;renderN()};fb.appendChild(b)});
+renderN();
+
+/* Gráficos SVG */
+const NS="http://www.w3.org/2000/svg";
+function el(p,t,a,txt){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;p.appendChild(e);return e}
+function frame(svg,min,max,step,W,H){
+ const L=56,R=12,T=16,B=30,h=H-T-B,w=W-L-R;
+ const y=v=>T+h-(v-min)/(max-min)*h;
+ for(let v=min;v<=max;v+=step){el(svg,"line",{x1:L,x2:W-R,y1:y(v),y2:y(v),stroke:"var(--line)"});el(svg,"text",{x:L-6,y:y(v)+4,"text-anchor":"end"},f(v))}
+ if(min<0)el(svg,"line",{x1:L,x2:W-R,y1:y(0),y2:y(0),stroke:"var(--mute)"});
+ const cw=w/D.length;
+ D.forEach((d,k)=>el(svg,"text",{x:L+cw*k+cw/2,y:H-8,"text-anchor":"middle"},d.y));
+ return{y,L,cw,T,h};
+}
+function bars(id,series,min,max,step,H){
+ const svg=document.getElementById(id),W=560,g=frame(svg,min,max,step,W,H);
+ const bw=Math.min(28,g.cw/(series.length+1));
+ D.forEach((d,k)=>series.forEach((s,j)=>{
+  const v=s.v(d),x=g.L+g.cw*k+g.cw/2-bw*series.length/2+bw*j,y0=g.y(0<min?min:0),y1=g.y(v);
+  el(svg,"rect",{x,y:Math.min(y0,y1),width:bw-2,height:Math.abs(y0-y1),fill:s.c(d)});
+  el(svg,"text",{x:x+bw/2-1,y:v<0?y1+12:y1-4,"text-anchor":"middle","font-size":9},f(v));
+ }));
+}
+function line(id,key,color,min,max,step){
+ const svg=document.getElementById(id),W=560,H=280,g=frame(svg,min,max,step,W,H);
+ const pts=D.map((d,k)=>[g.L+g.cw*k+g.cw/2,g.y(d[key])]);
+ el(svg,"polyline",{points:pts.map(p=>p.join(",")).join(" "),fill:"none",stroke:color,"stroke-width":2.5});
+ pts.forEach((p,k)=>{el(svg,"circle",{cx:p[0],cy:p[1],r:4,fill:color});el(svg,"text",{x:p[0],y:p[1]-9,"text-anchor":"middle"},f(D[k][key]))});
+}
+bars("c1",[{v:d=>d.e,c:()=>"var(--exp)"},{v:d=>d.i,c:()=>"var(--imp)"}],0,100000,20000,320);
+bars("c2",[{v:d=>d.s,c:d=>d.s<0?"var(--neg)":"var(--pos)"}],-10000,20000,5000,320);
+line("c3","e","var(--exp)",60000,100000,10000);
+line("c4","i","var(--imp)",50000,90000,10000);
+
+/* Menú activo */
+const links=[...document.querySelectorAll("#menu a")];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle("on",a.getAttribute("href")=="#"+e.target.id))}),{rootMargin:"-40% 0px -55% 0px"});
+document.querySelectorAll("main section").forEach(s=>io.observe(s));
+</script>
+</body>
+</html>
