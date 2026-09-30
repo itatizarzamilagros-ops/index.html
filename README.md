@@ -58,3 +58,4 @@ La información analizada se presenta mediante una página web desarrollada en H
 ## Fuentes
 
 Las fuentes utilizadas se encuentran detalladas dentro de los archivos de trabajo y en la página web del proyecto.
+ Adjunto link para su evolución y valoración: [[ANALITICA WEB](https://comfy-douhua-fa6b61.netlify.app/)]
